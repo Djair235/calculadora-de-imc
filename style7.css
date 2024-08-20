@@ -1,0 +1,38 @@
+html {
+    font-family: monospace;
+}
+
+#section {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+section #section,
+div {
+    text-align: center;
+}
+
+#inputSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#calcularButton {
+    height: 35px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #303030;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#resultSection {
+    display: none;
+    margin-top: 35px;
+}C:\Users\Pc\Desktop\Nova pasta\style7.css

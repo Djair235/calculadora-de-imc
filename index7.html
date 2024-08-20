@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style7.css">
+    <title>Documento</title>
+</head>
+
+<body>
+
+    <div id="section">
+        <div id="mainSection">
+            <h1>Calcular seu IMC</h1>
+            <div id="inputSection">
+                <input type="number" name="pesoInput" id="pesoInput" placeholder="Seu peso">
+                <input type="number" name="alturaInput" id="alturaInput" placeholder="Sua altura">
+                <button id="calcularButton">Calcular IMC</button>
+            </div>
+            <div id="resultSection">
+                <h1 id="resultH1"></h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let pesoInput = document.getElementById("pesoInput");
+        let alturaInput = document.getElementById("alturaInput");
+        let calcularButton = document.getElementById("calcularButton");
+        let resultH1 = document.getElementById("resultH1");
+        let divResultSection = document.getElementById("resultSection");
+
+        calcularButton.addEventListener("click", () => {
+            if (pesoInput.value == "" || pesoInput.value == 0 || alturaInput.value == "" || alturaInput.value == 0) {
+                divResultSection.style.display = "block";
+                resultH1.innerHTML = "Suas informações estão incompletas."
+
+            } else {
+                divResultSection.style.display = "block";
+                let imc = Number(pesoInput.value) / (Number(alturaInput.value) * Number(alturaInput.value));
+                resultH1.innerHTML = `Seu IMC é de ${imc.toFixed(2)}`
+            }
+        })
+    </script>
+</body>
+
+</html>
